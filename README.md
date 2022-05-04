@@ -4,8 +4,8 @@
 
 ## [Reference]
  ### Architecture
+ - Clean Architecture
 - MVVM
-- Clean Architecture
 - Coordinator Pattern
 
  ### UI
