@@ -105,7 +105,7 @@ class WeatherViewController: UIViewController {
         }
         viewModel?.action.fetch.onNext(location)
     }
-
+    
     private func setupView() {
         view.backgroundColor = .white
         
@@ -204,7 +204,7 @@ class WeatherViewController: UIViewController {
         weeklyWeatherCollectionView.delegate = self
         weeklyWeatherCollectionView.registerCell(cellType: WeeklyWeatherCollectionViewCell.self)
     }
-
+    
     private func bindAction() {
         addButton.rx.tap
             .subscribe(onNext: {
@@ -227,10 +227,10 @@ class WeatherViewController: UIViewController {
         
         viewModel?.state.weatherDataResponse
             .subscribe(onNext: { [weak self] weatherData in
-                    self?.currentWeatherView.setupView(location: location, data: weatherData)
-                    self?.clothingGuideCollectionView.reloadData()
-                    self?.dailyWeatherCollectionView.reloadData()
-                    self?.weeklyWeatherCollectionView.reloadData()
+                self?.currentWeatherView.setupView(location: location, data: weatherData)
+                self?.clothingGuideCollectionView.reloadData()
+                self?.dailyWeatherCollectionView.reloadData()
+                self?.weeklyWeatherCollectionView.reloadData()
             })
             .disposed(by: disposeBag)
     }
