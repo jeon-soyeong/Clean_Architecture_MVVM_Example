@@ -1,0 +1,27 @@
+
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '11.0'
+
+target 'WeatherLook_iOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for WeatherLook_iOS
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'Moya/RxSwift'
+    pod 'SnapKit'
+    pod 'Then'
+    pod 'Kingfisher'
+    pod 'RxCoreLocation'
+
+  target 'WeatherLook_iOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'WeatherLook_iOSUITests' do
+    # Pods for testing
+  end
+
+end
